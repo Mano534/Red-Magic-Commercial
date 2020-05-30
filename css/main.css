@@ -1,0 +1,268 @@
+body{
+    margin: 0px ;
+    padding: 0px ;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    /* overflow: hidden; */
+}
+a{
+    text-decoration: none;
+}
+.full-screen{
+    background-image: url(./../images/bg-image.jpg);
+    background-attachment:fixed ;
+    background-size: 100% 100%;
+    background-repeat:no-repeat ;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.content{
+    color: white;
+    background: rgba(255, 109, 96, 0.3);
+    width: 100%;
+    height: 100%;
+}
+
+
+.container{
+    margin: 0px auto;
+    width: 70%;
+}
+#header{
+    position: fixed;
+    padding: 10px 0px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 1rem;
+    background: rgba(255, 81, 0,.7)
+
+}
+#header ul{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+#header ul li{
+    padding: 5px 25px;
+    margin-bottom:5px;
+}
+#header ul li a{
+    padding: 5px 25px;
+    width: 100%;
+    height: 100% ; 
+    background-color: rgb(183, 7, 7);
+    color : white;
+    border-radius: 5px ;
+    transition: border 0.5s ease-in-out, background-color .5s ease-in-out ;
+    cursor: pointer;
+    border: none;
+}
+
+
+#header ul li a:hover{
+
+    background-color : white;
+    color: rgb(255, 72, 72);
+    border-bottom:1px solid  rgb(255, 72, 72);
+}
+
+.main{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+.product-qote{
+    padding: 3rem;
+    color: white;
+    text-align: center;
+    margin: 0px auto;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color .5s ease-in-out;
+
+}
+.product-qote:hover{
+    color :   rgb(255, 72, 72);
+}
+.email-under{
+    display: block;
+    margin: 0px auto;
+    padding: 2%; 
+    width: 40%;
+    border-radius: 6px;
+    color : #ffc015;
+    font-size: 1rem;
+    background: rgba(255, 166, 0,.5);
+    border:none;
+    outline: none;
+    transition:border 0.3s ease-in-out ;
+}
+.email-under:focus{
+    border: 3px solid  rgb(255, 72, 72);
+}
+.email-submit{
+    display: block;
+    margin: 30px auto;
+    padding: 1%;
+    border-radius: 7px;
+    
+    font-size: 1.2rem;
+    background: rgb(212, 208, 208);
+    /* border:none; */
+    outline: none;
+    background:white ;
+    color : #ffc015 ; 
+    border: 2px solid #ffc015;
+    cursor: pointer;
+
+}
+.email-submit:hover{
+    background: #ffc015;
+    color:white;
+}
+form{
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.grid{
+    display: grid;
+    min-width: 100% ; 
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    /* justify-items: center; */
+    grid-gap: 20px;
+}
+.gr-2{
+    opacity:0;
+    transform: translateY(-50%); 
+    transition: opacity 1s ease-in-out,transform 1s ease-in-out;
+}
+
+.gr-1{
+    font-size:4rem ;
+    color:#ffc015;
+    opacity:0;
+    transform: translate(-150%);
+    transition: opacity 1s ease-in-out 1s,transform 1s ease-in-out 1s;
+}
+@media (max-width: 500px){
+    .grid{
+        grid-template-columns:1fr;
+        align-items: center;
+        /* justify-items: center; */
+        grid-gap: 0px;
+    }
+    .gr-1{
+        display: none!important;
+    }
+    html{
+        font-size: 10px;
+    }
+    .container{
+        width: 90% ; 
+    }
+}
+@media (max-width:600px){
+    .main{
+        padding-top: 20vh;
+    }
+}
+@media (max-width:400px){
+    .main{
+        padding-top: 25vh;
+    }
+}
+.video{
+    margin: 50px auto;
+    width: 40vw;   
+    height: 40vh;
+    display: block; 
+    border: none ; 
+    outline: none;;  
+}
+
+.card{
+    padding-top:  10vh;
+    padding-bottom: 10vh ;
+}
+.cards{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+.cards .item{
+    border-radius: 6px;
+    min-width: 25% ;
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, .6);
+    background: rgb(238, 238, 238);
+    margin: 0px;
+    padding: 10px;
+    padding-top: 60px;
+    position: relative;
+    opacity: 0;
+    transform: translateY(-50%);
+    transition:opacity .4s ease-in-out, transform .4s ease-in-out;
+
+}
+.cards .item h1{
+    width: 94%;
+    background: rgba(218, 213, 213,.4);
+    color :  black;
+    margin: 0px;
+    padding: 10px;
+    display: block;
+    position: absolute;
+    left:0px;
+    top:0px;
+    font-size: 1.1rem;
+    padding-top: 30px;
+    padding-bottom:30px ;
+}
+.cards .item button{
+    border: none;
+    outline: none;
+    padding: 12px 20px;
+
+    color: rgb(0, 0, 0);
+    background: rgb(241,196,15);
+
+    cursor: pointer;
+}
+.card .item .price{
+    font-weight: bolder;
+    font-size: 1.4rem;
+}
+
+.animate{
+    opacity: 1!important;
+    transform: translate(0%,0%)!important;
+}
+.footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    list-style: none;
+}
+.footer ul li{
+    padding: 10px ;
+}
+.footer ul li a{
+    padding: 5px 25px;
+    width: 100%;
+    height: 100% ; 
+    color : black!important;
+    cursor: pointer;
+    border: none;
+}
+.p-copyright{
+    margin-left: 80vw;
+    font-size: 1rem;
+    font-weight: bold;
+}
